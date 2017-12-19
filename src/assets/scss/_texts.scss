@@ -1,0 +1,47 @@
+
+// --------------------------------------------------------------------------
+// Text styles
+// --------------------------------------------------------------------------
+
+.text {
+  &--large {
+    font-size: $font-size-large
+  }
+
+  &--small {
+    font-size: $font-size-small;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--muted {
+    color: $gray
+  }
+
+  &--dont-wrap {
+    white-space: nowrap;
+  }
+
+  &--bold {
+    font-weight: 500;
+  }
+
+  &--warning {
+    color: $brand-warning;
+  }
+
+  &--success {
+    color: $brand-primary;
+  }
+}
+

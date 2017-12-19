@@ -1,0 +1,96 @@
+
+// ------------------------------------------------------------
+// Global variables
+// ------------------------------------------------------------
+
+
+// Colors
+// ------------------------------------------------------------
+
+$brand-primary: #189E5E;
+$brand-warning: #EA3434;
+
+$gray-lighter: #F2F2F2;
+$gray-light: #C1BFC0;
+$gray: #888888;
+$gray-dark: #1F1F1F;
+$gray-darker: #000;
+
+
+// Quick colors
+$stylized-wrap: rgba(#fff, .5);
+
+
+// Modular Scale
+// ------------------------------------------------------------
+
+$mod-l7: rem(105);
+$mod-l6: rem(84);
+$mod-l5: rem(56);
+$mod-l4: rem(36);
+$mod-l3: rem(27);
+$mod-l2: rem(24);
+$mod-l1: rem(19);
+$mod-0:  rem(16);
+$mod-s1: rem(14);
+$mod-s2: rem(8);
+$mod-s3: rem(6);
+$mod-s4: rem(4);
+
+
+// Typography
+// ------------------------------------------------------------
+
+$font-family: "Georgia", Helvetica, Arial, sans-serif;
+
+$font-size-small: $mod-s1;
+$font-size-base: $mod-0;
+$font-size-large: $mod-l1;
+$font-size-h6: rem(12);
+$font-size-h5: $mod-0;
+$font-size-h4: $mod-l1;
+$font-size-h3: $mod-l2;
+$font-size-h2: $mod-l3;
+$font-size-h1: $mod-l4;
+
+$line-height-base: 1.4;
+
+
+// Positioning
+// ========================================
+
+$z-top: 1000;
+$z-way-above: 100;
+$z-more-above: 50;
+$z-above: 10;
+$z-below: -1;
+
+
+// Layout
+// ========================================
+
+$grid-gutter: 36px;
+$max-width: 1166px;
+$min-width: 320px;
+$side-spacing: 60px;
+
+
+// Animation
+// ========================================
+
+$bezier: cubic-bezier(.41,.39,.26,1);
+
+
+// Breakpoints
+// ========================================
+
+$bp-xxl: 1920px;
+$bp-xl: 1280px;
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 568px;
+$bp-xs: 360px;
+
+
+
+

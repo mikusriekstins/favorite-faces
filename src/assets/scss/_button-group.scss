@@ -1,0 +1,32 @@
+
+.button-group {
+  margin: $mod-s1 0 $mod-l1;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .button {
+    margin: rem(4);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--column {
+    margin-bottom: rem(18);
+
+    .button {
+      margin: 0 0 rem(6);
+    }
+  }
+}

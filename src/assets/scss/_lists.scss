@@ -1,0 +1,45 @@
+
+.list {
+  &--unstyled {
+    @include unstyle-list;
+  }
+
+  &--horizontal {
+    margin-top: 0;
+    @include unstyle-list;
+
+    > li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+
+      > *:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &.list--menu {
+      > li {
+        margin-left: $mod-s2;
+        margin-right: $mod-s2;
+      }
+    }
+  }
+
+  &__separate-right {
+    margin-right: $grid-gutter;
+  }
+
+}
+
+@media screen and (max-width: $bp-md) {
+  .list {
+    &__separate-right {
+      margin-right: $grid-gutter/2;
+    }
+  }
+}

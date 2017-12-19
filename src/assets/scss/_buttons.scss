@@ -1,0 +1,93 @@
+
+// --------------------------------------------------------------------------
+// Buttons
+// --------------------------------------------------------------------------
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $mod-0;
+  line-height: rem(24);
+  color: $gray-darker;
+  background-color: $gray-light;
+  font-weight: 500;
+  user-select: none;
+  padding: rem(6) rem(16);
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: color .2s ease,
+              background-color .2s ease,
+              border-color .2s ease,
+              transform .1s ease;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: darken($brand-primary, 10%);
+  }
+
+  &--primary {
+    background-color: $brand-primary;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: darken($brand-primary, 10%);
+      color: #fff;
+    }
+  }
+
+  &--large {
+    font-size: $mod-l1;
+    line-height: rem(24);
+    padding: rem(16) rem(19);
+  }
+
+  &--inverse {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(#fff, .25);
+    padding: rem(5) rem(15);
+
+    &:focus,
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid rgba(#000, .25);
+    padding: rem(5) rem(15);
+    color: $gray-darker;
+
+    &:focus,
+    &:hover {
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+
+  &--full {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  &--warning {
+    background-color: transparent;
+    border: 1px solid $brand-warning;
+    padding: rem(5) rem(15);
+    color: $brand-warning;
+
+    &:focus,
+    &:hover {
+      border-color: transparent;
+      background-color: $brand-warning;
+      color: #fff;
+    }
+  }
+}
+
+
