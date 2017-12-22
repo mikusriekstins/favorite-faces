@@ -1,0 +1,16 @@
+
+// --------------------------------------------------------------------------
+// Header
+// --------------------------------------------------------------------------
+
+.header {
+  background-color: $gray-darker;
+  color: #fff;
+  padding: $mod-0 $mod-0 ($mod-0 + rem(4));
+  
+  > h1 {
+    font-size: $font-size-large;
+    line-height: rem(30);
+    font-weight: bold;
+  }
+}

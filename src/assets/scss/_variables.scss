@@ -24,16 +24,16 @@ $stylized-wrap: rgba(#fff, .5);
 // Modular Scale
 // ------------------------------------------------------------
 
-$mod-l7: rem(105);
-$mod-l6: rem(84);
-$mod-l5: rem(56);
-$mod-l4: rem(36);
-$mod-l3: rem(27);
-$mod-l2: rem(24);
-$mod-l1: rem(19);
-$mod-0:  rem(16);
-$mod-s1: rem(14);
-$mod-s2: rem(8);
+$mod-l7: rem(726);
+$mod-l6: rem(449);
+$mod-l5: rem(277);
+$mod-l4: rem(171);
+$mod-l3: rem(106);
+$mod-l2: rem(65);
+$mod-l1: rem(40);
+$mod-0:  rem(25);
+$mod-s1: rem(16);
+$mod-s2: rem(10);
 $mod-s3: rem(6);
 $mod-s4: rem(4);
 
@@ -41,19 +41,19 @@ $mod-s4: rem(4);
 // Typography
 // ------------------------------------------------------------
 
-$font-family: "Georgia", Helvetica, Arial, sans-serif;
+$font-family: "nitti-grotesk", Helvetica, Arial, sans-serif;
 
 $font-size-small: $mod-s1;
 $font-size-base: $mod-0;
 $font-size-large: $mod-l1;
-$font-size-h6: rem(12);
-$font-size-h5: $mod-0;
-$font-size-h4: $mod-l1;
-$font-size-h3: $mod-l2;
-$font-size-h2: $mod-l3;
-$font-size-h1: $mod-l4;
+$font-size-h6: $mod-s1;
+$font-size-h5: $mod-s1;
+$font-size-h4: $mod-s1;
+$font-size-h3: $mod-0;
+$font-size-h2: $mod-l1;
+$font-size-h1: $mod-l2;
 
-$line-height-base: 1.4;
+$line-height-base: 1.47;
 
 
 // Positioning

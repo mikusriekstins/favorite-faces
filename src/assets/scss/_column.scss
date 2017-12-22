@@ -1,0 +1,27 @@
+
+// --------------------------------------------------------------------------
+// Flex column
+// --------------------------------------------------------------------------
+
+.column {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+
+  &--with-header {
+    margin-top: rem(-84);
+    padding-top: rem(84);
+  }
+  
+  &__inner {
+    width: 100%;
+    padding: $mod-0;
+
+    &--full {
+      padding: 0;
+    }
+  }
+}
+
+

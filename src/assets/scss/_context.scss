@@ -1,0 +1,30 @@
+
+// --------------------------------------------------------------------------
+// Context
+// --------------------------------------------------------------------------
+
+.context {
+  position: absolute;
+  top: rem(30);
+  left: rem(30);
+  right: rem(30);
+  bottom: rem(30);
+  border: solid 4px $gray-darker;
+  display: flex;
+  flex-direction: row;
+
+  > .grid {
+    width: 100%;
+    display: flex;
+    background: $gray-dark;
+
+    > [class^='col--'] {
+      background-color: #fff;
+      margin-right: 4px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

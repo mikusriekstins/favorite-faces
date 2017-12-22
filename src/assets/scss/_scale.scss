@@ -1,0 +1,40 @@
+
+// --------------------------------------------------------------------------
+// Scale
+// --------------------------------------------------------------------------
+
+.scale {
+  @include unstyle-list;
+  font-size: $font-size-base;
+  margin: 0;
+
+  > li {
+    margin: 0;
+    height: rem(44);
+    position: relative;
+    padding: 0 $mod-s2;
+    line-height: rem(44);
+    margin: 0;
+    text-align: center;
+    
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 1px;
+      background-color: $gray-light;
+    }
+
+    &:after {
+      width: $mod-0;
+      top: 0;
+    }
+
+    &:before {
+      width: $mod-s2;
+      top: 50%;
+    }
+  }
+}

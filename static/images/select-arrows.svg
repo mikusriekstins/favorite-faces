@@ -1,0 +1,21 @@
+<svg width="14" height="22" viewBox="0 0 14 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>select-arrows</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1049 450)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 1049 -450L 1063 -450L 1063 -428L 1049 -428L 1049 -450Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="select-arrows" clip-path="url(#clip-0)">
+<path d="M 1049 -450L 1063 -450L 1063 -428L 1049 -428L 1049 -450Z" fill="#FFFFFF"/>
+<g id="Rectangle 4">
+<use xlink:href="#path0_stroke" transform="translate(1051 -447)"/>
+</g>
+<g id="Rectangle 4.1">
+<use xlink:href="#path0_stroke" transform="matrix(1 0 0 -1 1051 -431)"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 5 0L 5.70711 -0.707107L 5 -1.41421L 4.29289 -0.707107L 5 0ZM 0.707107 5.70711L 5.70711 0.707107L 4.29289 -0.707107L -0.707107 4.29289L 0.707107 5.70711ZM 4.29289 0.707107L 9.29289 5.70711L 10.7071 4.29289L 5.70711 -0.707107L 4.29289 0.707107Z"/>
+</defs>
+</svg>
