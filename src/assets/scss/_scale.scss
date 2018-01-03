@@ -36,5 +36,9 @@
       width: $mod-s2;
       top: 50%;
     }
+
+    &:first-child:after {
+      display: none;
+    }
   }
 }

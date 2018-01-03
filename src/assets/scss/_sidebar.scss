@@ -1,0 +1,29 @@
+
+// --------------------------------------------------------------------------
+// Sidebar
+// --------------------------------------------------------------------------
+
+.sidebar {
+  width: 33.333%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: rem(30) 0 rem(30) rem(30);
+
+  &__inner {
+    border: solid 4px $gray-darker;
+    border-right: 0;
+    background-color: #fff;
+
+    > .grid {
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      .col--3-4 {
+        border-right: solid 4px $gray-darker;
+      }
+    }
+  }
+}

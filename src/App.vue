@@ -1,73 +1,82 @@
 <template>
   <div id="app">
 
-    <div class="context">
-      <div class="grid grid--no-gutter">
-        <aside class="col--1-4">
+    <aside class="sidebar">
+      <div class="sidebar__inner">
 
-          <header class="header">
-            <h1>Modular Scale</h1>
-          </header>
+        <div class="grid grid--no-gutter">
 
-          <div class="column column--with-header">
-            <form class="column__inner">
+          <div class="col--3-4">
 
-              <div class="input-group">
-                <label class="input__label">Font family</label>
-                <select class="input input--select" v-model="fontFamily">
-                  <option v-for="font in fontFamilies" v-bind:value="font.id">{{ font.name }}</option>
-                </select>
-              </div>
+            <header class="header">
+              <h1>Modular Scale</h1>
+            </header>
 
-              <div class="input-group">
-                <label class="input__label">Line height</label>
-                <input class="input" type="number" v-model="leading" min="1" max="2" step="0.05">
-              </div>
+            <div class="column column--with-header">
+              <form class="column__inner">
 
-              <div class="input-group">
-                <label class="input__label">Ratio</label>
-                <select class="input input--select" v-model="activeRatio">
-                  <option v-for="ratio in ratios" v-bind:value="ratio.val">{{ ratio.val }} - {{ ratio.name }}</option>
-                </select>
-              </div>
-
-              <div class="input-group">
-                <label class="input__label">Scale root</label>
-                <div class="input-group__inline">
-                  <input class="input input--large" type="number" v-model="scaleRoot">
-                  <a class="input__minus" v-on:click="decreaseRoot"></a>
-                  <a class="input__plus" v-on:click="increaseRoot"></a>
+                <div class="input-group">
+                  <label class="input__label">Font family</label>
+                  <select class="input input--select" v-model="fontFamily">
+                    <option v-for="font in fontFamilies" v-bind:value="font.id">{{ font.name }}</option>
+                  </select>
                 </div>
+
+                <div class="input-group">
+                  <label class="input__label">Line height</label>
+                  <input class="input" type="number" v-model="leading" min="1" max="2" step="0.05">
+                </div>
+
+                <div class="input-group">
+                  <label class="input__label">Ratio</label>
+                  <select class="input input--select" v-model="activeRatio">
+                    <option v-for="ratio in ratios" v-bind:value="ratio.val">{{ ratio.val }} - {{ ratio.name }}</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                  <label class="input__label">Scale root</label>
+                  <div class="input-group__inline">
+                    <input class="input input--large" type="number" v-model="scaleRoot">
+                    <a class="input__minus" v-on:click="decreaseRoot"></a>
+                    <a class="input__plus" v-on:click="increaseRoot"></a>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+          <div class="col--1-4">
+
+            <div class="column">
+              <div class="column__inner column__inner--full">
+
+                <scale v-bind:base="scaleRoot" v-bind:ratio="activeRatio"></scale>
+
               </div>
-
-            </form>
-          </div>
-
-        </aside>
-        <div class="col--1-12">
-
-          <div class="column">
-            <div class="column__inner column__inner--full">
-
-              <scale v-bind:base="scaleRoot" v-bind:ratio="activeRatio"></scale>
-
             </div>
+
           </div>
 
         </div>
-        <div class="col--2-3">
 
-          <div class="column">
-            <div class="column__inner">
-
-              <preview v-bind:family="fontFamilies[fontFamily]" v-bind:root="scaleRoot" v-bind:ratio="activeRatio" v-bind:leading="leading"></preview>
-
-            </div>
-          </div>
-
-        </div>
       </div>
-    </div>
+    </aside>
+
+    <main class="context">
+      <div class="context__inner">
+
+        <preview 
+          v-bind:family="fontFamilies[fontFamily]" 
+          v-bind:root="scaleRoot" 
+          v-bind:ratio="activeRatio" 
+          v-bind:leading="leading">
+        </preview>
+
+      </div>
+    </main>
 
   </div>
 </template>

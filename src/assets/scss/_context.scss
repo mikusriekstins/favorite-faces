@@ -4,26 +4,27 @@
 // --------------------------------------------------------------------------
 
 .context {
-  position: absolute;
-  top: rem(30);
-  left: rem(30);
-  right: rem(30);
-  bottom: rem(30);
-  border: solid 4px $gray-darker;
-  display: flex;
-  flex-direction: row;
+  width: 66.666%;
+  margin-left: 33.333%;
+  padding: rem(30) rem(30) rem(30) 0;
 
-  > .grid {
-    width: 100%;
-    display: flex;
-    background: $gray-dark;
+  &__inner {
+    background-color: #fff;
+    border: solid 4px $gray-darker;
+    padding: rem(80);
 
-    > [class^='col--'] {
-      background-color: #fff;
-      margin-right: 4px;
+    > .grid {
+      width: 100%;
+      display: flex;
+      background: $gray-dark;
 
-      &:last-child {
-        margin-right: 0;
+      > [class^='col--'] {
+        background-color: #fff;
+        margin-right: 4px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
