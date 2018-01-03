@@ -9,4 +9,20 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &__inline {
+    display: flex;
+    flex-flow: row nowrap;
+
+    > .input {
+      width: 0;
+      flex: 1 1 auto;
+    }
+
+    > .input__plus,
+    > .input__minus {
+      flex: 0 0 rem(64);
+      margin-left: rem(4);
+    }
+  }
 }

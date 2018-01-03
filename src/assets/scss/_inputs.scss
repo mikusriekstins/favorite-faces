@@ -34,4 +34,46 @@
     text-transform: uppercase;
     display: block;
   }
+
+  &__plus,
+  &__minus {
+    display: block;
+    height: rem(64);
+    width: rem(64);
+    border-radius: rem(3);
+    position: relative;
+    border: solid 1px $gray-darker;
+    transition: background-color .2s $bezier;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-lighter;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(24);
+      height: rem(2);
+      margin: rem(-1) rem(-12);
+      background-color: $gray-darker;
+    }
+  }
+
+  &__plus {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(2);
+      height: rem(24);
+      margin: rem(-12) rem(-1);
+      background-color: $gray-darker;
+    }
+  }
 }

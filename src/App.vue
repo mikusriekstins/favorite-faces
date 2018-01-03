@@ -15,13 +15,13 @@
               <div class="input-group">
                 <label class="input__label">Font family</label>
                 <select class="input input--select" v-model="fontFamily">
-                  <option v-for="font in fontFamilies" v-bind:value="font.val">{{ font.name }}</option>
+                  <option v-for="font in fontFamilies" v-bind:value="font.id">{{ font.name }}</option>
                 </select>
               </div>
 
               <div class="input-group">
                 <label class="input__label">Line height</label>
-                <input class="input" type="number" value="1.5">
+                <input class="input" type="number" v-model="leading" min="1" max="2" step="0.05">
               </div>
 
               <div class="input-group">
@@ -33,7 +33,11 @@
 
               <div class="input-group">
                 <label class="input__label">Scale root</label>
-                <input class="input input--large" type="number" v-model="scaleRoot">
+                <div class="input-group__inline">
+                  <input class="input input--large" type="number" v-model="scaleRoot">
+                  <a class="input__minus" v-on:click="decreaseRoot"></a>
+                  <a class="input__plus" v-on:click="increaseRoot"></a>
+                </div>
               </div>
 
             </form>
@@ -55,7 +59,9 @@
 
           <div class="column">
             <div class="column__inner">
-              <h1>{{ this.fontFamilies[this.fontFamily].name }}</h1>
+
+              <preview v-bind:family="fontFamilies[fontFamily]" v-bind:root="scaleRoot" v-bind:ratio="activeRatio" v-bind:leading="leading"></preview>
+
             </div>
           </div>
 
@@ -69,6 +75,7 @@
 <script>
 
 import Scale from './components/Scale.vue'
+import Preview from './components/Preview.vue'
 
 
 export default {
@@ -79,6 +86,7 @@ export default {
       scaleRoot: 16,
       fontFamily: 'nitti-grotesk',
       activeRatio: 1.333,
+      leading: 1.5,
       ratios: {
         'minor-second':     { name: 'Minor second', val: 1.067 },
         'major-second':     { name: 'Major second', val: 1.125 },
@@ -90,8 +98,10 @@ export default {
         'golden-section':   { name: 'Golden section', val: 1.618 }
       },
       fontFamilies: {
-        'nitti-grotesk':    { name: 'Nitti Grotesk', val: 'nitti-grotesk' },
-        'georgia':          { name: 'Georgia', val: 'Georgia' }
+        'nitti-grotesk':    { id: 'nitti-grotesk', name: 'Nitti Grotesk', val: 'nitti-grotesk' },
+        'georgia':          { id: 'georgia', name: 'Georgia', val: 'Georgia' },
+        'helvetica':          { id: 'helvetica', name: 'Helvetica Neue', val: 'Helvetica Neue' },
+        'times-new-roman':          { id: 'times-new-roman', name: 'Times New Roman', val: 'Times New Roman' }
       }
     }
   },
@@ -100,10 +110,13 @@ export default {
   },
 
   methods: {
+    increaseRoot () { this.scaleRoot++; },
+    decreaseRoot () { this.scaleRoot--; }
   },
 
   components: {
-    Scale
+    Scale,
+    Preview
   }
 }
 </script>
